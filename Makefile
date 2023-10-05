@@ -1,8 +1,11 @@
 install:
 	npm ci
 
-brain-games:     # Добавляем правило для сборки 'brain-games'
+brain-games:
 	node bin/brain-games.js
 
 publish:
 	npm publish --dry-run
+
+lint:
+	npx eslint . --ext .js

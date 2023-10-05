@@ -1,0 +1,14 @@
+extends: 'airbnb-base'
+
+plugins:
+  - import
+
+rules:
+  no-console: 'off'
+  import/extensions:
+    - error
+    - ignorePackages
+    - js: always
+      mjs: never
+      jsx: never
+  import/prefer-default-export: 'off'  # Отключаем правило
