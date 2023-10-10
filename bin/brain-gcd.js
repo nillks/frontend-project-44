@@ -1,20 +1,28 @@
-// brain-even.js
+// brain-gcd.js
 
 import { runGame, showMessage } from '../src/index.js';
 
-showMessage('Answer "yes" if the number is even, otherwise answer "no".');
-
-function getRandomNumber(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+function findGCD(a, b) {
+  if (b === 0) {
+    return a;
+  }
+  return findGCD(b, a % b);
 }
 
 function generateQuestion() {
-  const randomNumber = getRandomNumber(1, 100);
-  const isEven = randomNumber % 2 === 0;
-  const question = `${randomNumber}`;
-  const correctAnswer = isEven ? 'yes' : 'no';
+  const num1 = Math.floor(Math.random() * 100) + 1;
+  const num2 = Math.floor(Math.random() * 100) + 1;
+  const question = `${num1} ${num2}`;
+  const correctAnswer = findGCD(num1, num2);
 
-  return { question, correctAnswer };
+  showMessage('Find the greatest common divisor of given numbers.');
+  console.log(`Question: ${question}`);
+
+  return { question, correctAnswer: correctAnswer.toString() };
 }
 
-runGame(generateQuestion);
+const playerName = runGame(generateQuestion);
+
+if (playerName) {
+  showMessage(`Congratulations, ${playerName}!`);
+}
