@@ -9,7 +9,7 @@ function generateProgression() {
   const progression = [];
   const hiddenIndex = Math.floor(Math.random() * length); // Генерируем позицию для скрытого числа
 
-  for (let i = 0; i < length; i++) {
+  for (let i = 0; i < length; i += 1) {
     if (i === hiddenIndex) {
       progression.push('..'); // Заменяем число двумя точками
     } else {

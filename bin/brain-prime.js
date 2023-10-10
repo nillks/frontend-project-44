@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 import { runGame } from '../src/index.js';
 
+function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 // Функция для проверки числа на простоту
 function isPrime(number) {
   if (number <= 1) return false;
@@ -26,7 +30,3 @@ function generateQuestion() {
 
 const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 runGame(generateQuestion, gameDescription);
-
-function getRandomNumber(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
