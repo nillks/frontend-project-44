@@ -6,3 +6,4 @@
 [Демо-игры: brain-even](https://asciinema.org/a/GzBeC9xufTpDQIW5DUZu0I6Nu)
 [Демо-игры: brain-calc](https://asciinema.org/a/xCSjKxLt3iSfL9r6CG7S6rqgQ)
 [Демо-игры: brain-gcd](https://asciinema.org/a/DunlX6KSvCaoTueaDmYy1DFm4)
+[Демо-игры: brain-progression](https://asciinema.org/a/SU2sONPp0jmG1aOK6TcxyOEaQ)
