@@ -7,6 +7,9 @@ function getRandomNumber(min, max) {
 }
 
 function generateQuestion() {
+  // Выводим сообщение о вопросе перед генерацией вопроса
+  console.log('What is the result of the expression?');
+
   const randomNumber1 = getRandomNumber(1, 10);
   const randomNumber2 = getRandomNumber(1, 10);
   const operators = ['+', '-', '*'];

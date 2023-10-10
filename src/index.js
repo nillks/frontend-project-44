@@ -3,10 +3,14 @@
 import readlineSync from 'readline-sync';
 
 // Общая функция для запуска игр
-export function runGame(gameLogic, maxRounds = 3) {
+export function runGame(gameLogic, gameDescription, maxRounds = 3) { // Добавляем gameDescription
   console.log('Welcome to the Brain Games!');
   const playerName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${playerName}!`);
+
+  if (gameDescription) { // Проверяем, есть ли gameDescription
+    console.log(gameDescription); // Если есть, выводим его
+  }
 
   let correctAnswersCount = 0;
 
@@ -25,4 +29,8 @@ export function runGame(gameLogic, maxRounds = 3) {
   }
 
   console.log(`Congratulations, ${playerName}!`);
+}
+
+export function showMessage(message) {
+  console.log(message);
 }
