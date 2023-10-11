@@ -8,11 +8,11 @@ function getRandomNumber() {
 
 function generateQuestion() {
   const randomNumber = getRandomNumber();
-  return { question: `${randomNumber}`, correctAnswer: randomNumber % 2 === 0 ? 'yes' : 'no' };
+  return { question: `Question: ${randomNumber}`, correctAnswer: randomNumber % 2 === 0 ? 'yes' : 'no' };
 }
 
 const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
-const playerName = runGame(generateQuestion, 3, gameDescription);
+const playerName = runGame(generateQuestion, gameDescription);
 
 if (playerName) {
   showMessage(`Congratulations, ${playerName}!`);
