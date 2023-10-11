@@ -1,5 +1,3 @@
-// src/index.js
-
 import readlineSync from 'readline-sync';
 
 // Общая функция для запуска игр

@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 import { runGame, showMessage } from '../src/index.js';
 
 function generateProgression() {

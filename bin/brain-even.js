@@ -1,4 +1,4 @@
-// brain-even.js
+#!/usr/bin/env node
 
 import { runGame, showMessage } from '../src/index.js';
 
